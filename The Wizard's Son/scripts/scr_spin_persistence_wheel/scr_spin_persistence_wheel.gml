@@ -11,5 +11,9 @@ function scr_spin_persistence_wheel(){
 	
 	variable_struct_set(global.modifiers, chosen_slice.stat_key, rolled_multiplier);
 	
-	return "The Persistence Wheel selected: " + chosen_slice.name + " set to " + string(rolled_multiplier);
+	return {
+		category_name: chosen_slice.name,
+		category_index: random_index,
+		multiplier_value: rolled_multiplier
+	};
 }
