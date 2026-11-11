@@ -7,3 +7,5 @@ max_spin_speed = 15;
 target_angle = 0;
 total_slices = 6;
 degrees_per_slice = 360 / total_slices;
+
+visible = false;

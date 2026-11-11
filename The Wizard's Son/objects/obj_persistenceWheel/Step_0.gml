@@ -15,3 +15,10 @@ if (is_spinning){
 		  show_debug_message("Wheel has finished spinning");
 	  }
 }
+
+//Cheat code to show and remove wheel
+if (keyboard_check(vk_alt) and keyboard_check_pressed(ord("W"))){
+	if(instance_exists(obj_persistenceWheel)){
+		obj_persistenceWheel.visible = !obj_persistenceWheel.visible;
+	}
+}
