@@ -1,0 +1,1 @@
+back_timer = 0 //How long it is still backing away
