@@ -47,6 +47,7 @@
     {"id":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},},
     {"id":{"name":"obj_enemyattack","path":"objects/obj_enemyattack/obj_enemyattack.yy",},},
     {"id":{"name":"obj_gameController","path":"objects/obj_gameController/obj_gameController.yy",},},
+    {"id":{"name":"obj_healthbar","path":"objects/obj_healthbar/obj_healthbar.yy",},},
     {"id":{"name":"obj_melee","path":"objects/obj_melee/obj_melee.yy",},},
     {"id":{"name":"obj_persistenceWheel","path":"objects/obj_persistenceWheel/obj_persistenceWheel.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},

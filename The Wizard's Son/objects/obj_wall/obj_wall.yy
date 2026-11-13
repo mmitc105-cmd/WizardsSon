@@ -26,7 +26,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_wallplaceholder",
     "path":"sprites/spr_wallplaceholder/spr_wallplaceholder.yy",

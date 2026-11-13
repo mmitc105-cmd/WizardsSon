@@ -1,21 +1,36 @@
-//Movement keys (either arrow keys or WASD)
+// Movement keys
 key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
 key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
-
-
 
 move_speed = 4;
 
 h_input = key_right - key_left;
 v_input = key_down - key_up;
 
-h_speed = h_input * move_speed;
-v_speed = v_input * move_speed;
+// Normalize diagonal movement
+var length = point_distance(0, 0, h_input, v_input);
 
-x += h_speed;
-y += v_speed;
+var move_x = 0;
+var move_y = 0;
+
+if (length > 0) {
+    move_x = (h_input / length) * move_speed;
+    move_y = (v_input / length) * move_speed;
+}
+
+// Horizontal collision
+if (!place_meeting(x + move_x, y, obj_wall) &&
+    !place_meeting(x + move_x, y, obj_melee)) {
+    x += move_x;
+}
+
+// Vertical collision
+if (!place_meeting(x, y + move_y, obj_wall) &&
+    !place_meeting(x, y + move_y, obj_melee)) {
+    y += move_y;
+}
 
 half_width = sprite_width /2;
 half_height = sprite_height/2;
