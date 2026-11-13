@@ -55,3 +55,8 @@ if (keyboard_check_pressed(vk_space)) {
     attack.speed = 10;
 }
 
+
+if (keyboard_check(vk_alt) and keyboard_check_pressed(ord("E"))){
+	
+	instance_create_layer(room_width/2, room_height/2, "Instances", obj_melee);
+}
