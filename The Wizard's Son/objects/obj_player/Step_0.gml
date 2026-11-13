@@ -23,35 +23,35 @@ half_height = sprite_height/2;
 x = clamp(x, half_width, room_width - half_width);
 y = clamp(y, half_height, room_height - half_height);
 
-// Flip sprite based on movement direction
+// Update facing direction based on movement
+if (h_input != 0 || v_input != 0) {
+    facing = point_direction(0, 0, h_input, v_input);
+}
+
+// Flip sprite based on horizontal movement
 if (h_input > 0) {
-    facing = 1;
     image_xscale = 1;
 }
 else if (h_input < 0) {
-    facing = -1;
     image_xscale = -1;
 }
 
 // Shoot magic by pressing space
 if (keyboard_check_pressed(vk_space)) {
-    var attack_x;
 
-    if (facing == 1) {
-        attack_x = bbox_right + 10;
-    }
-    else {
-        attack_x = bbox_left - 10;
-    }
+    var spawn_distance = 40;
+
+    var attack_x = x + lengthdir_x(spawn_distance, facing);
+    var attack_y = y + lengthdir_y(spawn_distance, facing);
 
     var attack = instance_create_layer(
         attack_x,
-        y,
+        attack_y,
         "Instances",
         obj_attack
     );
 
-    attack.direction = (facing == 1) ? 0 : 180;
+    attack.direction = facing;
     attack.speed = 10;
 }
 

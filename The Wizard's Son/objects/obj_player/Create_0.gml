@@ -1,2 +1,2 @@
-facing = 1; // Start facing right
+facing = 0; // Start facing right
 hp = 100
