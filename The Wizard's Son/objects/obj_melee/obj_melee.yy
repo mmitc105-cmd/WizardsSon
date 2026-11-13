@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_enemyplaceholder",
-    "path":"sprites/spr_enemyplaceholder/spr_enemyplaceholder.yy",
+    "name":"spr_enemy_melee_walk",
+    "path":"sprites/spr_enemy_melee_walk/spr_enemy_melee_walk.yy",
   },
   "spriteMaskId":null,
   "visible":true,
