@@ -12,6 +12,10 @@ Play as Sisyphus, son of Aeolus, as he battles through a dungeon to escape his f
 - Gold, weapons, armor, and other rewards
 - Challenging boss encounters and replayable gameplay
 
+## Cheat Codes
+- Alt + W : Makes Wheel of Persistence appear
+- Alt + E : Create a melee enemy
+
 ## Development Team
 - **Producer:** Maddy Mitchell
 - **Designer:** Johnny Santos
